@@ -1,0 +1,17 @@
+.navbar {
+  background-color: var(--color-dark-blue);
+}
+
+.navLink {
+  color: var(--color-white);
+  font-weight: 500;
+  font-size: 18px;
+  padding: 0 48px;
+}
+
+.activeLink,
+.navLink:hover,
+.navLink:focus,
+.navLink:active {
+  color: var(--color-orange);
+}

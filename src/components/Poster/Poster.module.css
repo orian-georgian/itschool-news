@@ -1,0 +1,14 @@
+.outerContainer {
+  background-color: var(--color-light-gray);
+  padding: 0;
+}
+
+.textSection {
+  display: flex;
+  gap: 20px;
+  margin-top: auto;
+}
+
+.posterImage {
+  max-height: 400px;
+}

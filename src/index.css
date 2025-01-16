@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap:wght@400;500;600;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-dark-blue: #191e30;
+  --color-white: #fff;
+  --color-orange: #ecb13a;
+  --color-light-gray: #cacdc11a;
+}
+
+head,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "ASAP", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.mh-50 {
+  max-height: 50px;
+}
