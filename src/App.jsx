@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 import { Container } from "react-bootstrap";
 import { Article, Favorites, LandingPage, SectionPage } from "./pages";
@@ -13,7 +13,7 @@ function App() {
   return (
     <Provider store={store}>
       <Container fluid className="p-0">
-        <BrowserRouter>
+        <HashRouter>
           <Routes>
             <Route
               path="/"
@@ -53,7 +53,7 @@ function App() {
               }
             />
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
         <Footer />
       </Container>
     </Provider>
