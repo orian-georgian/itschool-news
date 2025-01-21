@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/itschool-news/static/css/main.710475c9.css",
+    "main.js": "/itschool-news/static/js/main.0344f6c7.js",
+    "static/media/weatherImg.png": "/itschool-news/static/media/weatherImg.e3375e88aef66ad577bf.png",
+    "static/media/politicsImg.png": "/itschool-news/static/media/politicsImg.f6dfca33186fc13af973.png",
+    "static/media/favorites.png": "/itschool-news/static/media/favorites.01ab3ef1635ac43ec31d.png",
+    "static/media/news-girl.png": "/itschool-news/static/media/news-girl.9b4e4901ef4e652ffd43.png",
+    "static/media/sport.webp": "/itschool-news/static/media/sport.d2589afcf8c4208deec5.webp",
+    "static/media/logo.png": "/itschool-news/static/media/logo.916eea6b5b72fda14df9.png",
+    "index.html": "/itschool-news/index.html",
+    "main.710475c9.css.map": "/itschool-news/static/css/main.710475c9.css.map",
+    "main.0344f6c7.js.map": "/itschool-news/static/js/main.0344f6c7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.710475c9.css",
+    "static/js/main.0344f6c7.js"
+  ]
+}
