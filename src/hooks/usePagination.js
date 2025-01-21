@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
-export function usePagination() {
+export function usePagination(query) {
   const [page, setPage] = useState(1);
   const [pageSize, setPageSize] = useState(20);
 
@@ -19,6 +19,10 @@ export function usePagination() {
   function changePageSize(size) {
     setPageSize(size);
   }
+
+  useEffect(() => {
+    setPage(1);
+  }, [query]);
 
   return { page, pageSize, goPrevPage, goToNextPage, goToPage, changePageSize };
 }

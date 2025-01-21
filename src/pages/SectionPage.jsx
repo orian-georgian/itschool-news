@@ -7,7 +7,12 @@ import sportImg from "../assets/images/sport.webp";
 import weatherImg from "../assets/images/weatherImg.png";
 import politicsImg from "../assets/images/politicsImg.png";
 
-import { Poster, ArticleCard, Pagination } from "../components";
+import {
+  Poster,
+  ArticleCard,
+  Pagination,
+  CardPlaceholder,
+} from "../components";
 
 import { usePagination } from "../hooks/usePagination";
 import { getArticlesUrl } from "../api/articles";
@@ -16,12 +21,14 @@ export function SectionPage() {
   const { section } = useParams();
   const query = useSelector((state) => state.search.query);
   const { page, pageSize, goPrevPage, goToNextPage, goToPage, changePageSize } =
-    usePagination();
+    usePagination(query);
   const url = getArticlesUrl({ page, pageSize, query, section });
-  const { data, loading } = useFetch(url, page, pageSize);
+  const { data, loading } = useFetch(url);
 
   const articles = data?.response?.results;
   const totalPages = data?.response?.pages;
+
+  console.log("loading", loading);
 
   return (
     <Stack>
@@ -49,13 +56,27 @@ export function SectionPage() {
 
       <Container className="py-5" fluid>
         <Container>
-          <Row>
-            {articles?.map((article) => (
-              <Col className="p-3" xs={12} md={6} lg={4} key={article.id}>
-                <ArticleCard {...article} />
+          {loading ? (
+            <Row>
+              <Col className="p-3" xs={12} md={6} lg={4}>
+                <CardPlaceholder />
               </Col>
-            ))}
-          </Row>
+              <Col className="p-3" xs={12} md={6} lg={4}>
+                <CardPlaceholder />
+              </Col>
+              <Col className="p-3" xs={12} md={6} lg={4}>
+                <CardPlaceholder />
+              </Col>
+            </Row>
+          ) : (
+            <Row>
+              {articles?.map((article) => (
+                <Col className="p-3" xs={12} md={6} lg={4} key={article.id}>
+                  <ArticleCard {...article} />
+                </Col>
+              ))}
+            </Row>
+          )}
         </Container>
       </Container>
 

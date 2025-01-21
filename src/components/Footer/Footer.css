@@ -71,3 +71,9 @@
 .footer .terms-links a:first-of-type {
   margin-left: auto;
 }
+
+@media screen and (max-width: 767px) {
+  .footer .links {
+    flex-direction: column;
+  }
+}
