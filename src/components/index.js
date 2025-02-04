@@ -5,3 +5,4 @@ export * from "./ArticleCard/ArticleCard";
 export * from "./Pagination/Pagination";
 export * from "./Search/Search";
 export * from "./ArticleCard/CardPlaceholder";
+export * from "./Carousel/Carousel";

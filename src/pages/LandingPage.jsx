@@ -12,6 +12,7 @@ import newsGirl from "../assets/images/news-girl.png";
 import { useFetch } from "../hooks/useFetch";
 import { usePagination } from "../hooks/usePagination";
 import { getArticlesUrl } from "../api/articles";
+import Carousel from "../components/Carousel/Carousel";
 
 export function LandingPage() {
   const query = useSelector((state) => state.search.query);
@@ -65,6 +66,8 @@ export function LandingPage() {
         onPage={goToPage}
         onPageSizeChange={changePageSize}
       />
+
+      <Carousel />
     </Stack>
   );
 }

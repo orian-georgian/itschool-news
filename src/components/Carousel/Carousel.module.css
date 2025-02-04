@@ -1,0 +1,16 @@
+.imagesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.image {
+  width: 20%;
+  min-height: 100px;
+  border: 1px solid var(--color-dark-blue);
+}
+
+.mainImage {
+  width: 40%;
+  min-height: 250px;
+}
